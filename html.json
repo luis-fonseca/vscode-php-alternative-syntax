@@ -1,0 +1,135 @@
+{
+	// Place your snippets for html here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"php": {
+		"prefix": "php",
+		"body": [
+			"<?php ${1}; ?>",
+		],
+		"description": "Inserts php opening and closing tags."
+	},
+	"echo": {
+		"prefix": "echo",
+		"body": [
+			"<?php echo ${1:\\$expr1}; ?>",
+		],
+		"description": "Inserts an echo statement between the php opening and closing tags."
+	},
+	"ifend": {
+		"prefix": "ifend",
+		"body": [
+			"<?php if (${1:expr1}): ?>",
+			"\t${2}",
+			"<?php endif; ?>"
+		],
+		"description": "Inserts an alternative syntax for the PHP if statement."
+	},
+	"ifelseifend": {
+		"prefix": "ifelseifend",
+		"body": [
+			"<?php if (${1:expr1}): ?>",
+			"\t${2}",
+			"<?php elseif (${3:expr2}): ?>",
+			"\t${4}",
+			"<?php else: ?>",
+			"\t${5}",
+			"<?php endif; ?>"
+		],
+		"description": "Inserts an alternative syntax for the PHP if/elseif/else statement."
+	},
+	"ifelseend": {
+		"prefix": "ifelseend",
+		"body": [
+			"<?php if (${1:expr1}): ?>",
+			"\t${2}",
+			"<?php else: ?>",
+			"\t${3}",
+			"<?php endif; ?>"
+		],
+		"description": "Inserts an alternative syntax for the PHP if/else statement."
+	},
+	"forend": {
+		"prefix": "forend",
+		"body": [
+			"<?php for (${1:\\$expr1}; ${2:\\$expr2}; ${3:\\$expr3}): ?>",
+			"${4}",
+			"<?php endfor; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP for statement."
+	},
+	"foreachend": {
+		"prefix": "foreachend",
+		"body": [
+			"<?php foreach (${1:\\$variable} as ${2:\\$value}): ?>",
+			"${4}",
+			"<?php endforeach; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP for statement to traverse for each value of an array."
+	},
+	"foreachkvend": {
+		"prefix": "foreachkvend",
+		"body": [
+			"<?php foreach (${1:\\$variable} as ${2:\\$key} => ${3:\\$value}): ?>",
+			"\t${4}",
+			"<?php endforeach; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP for statement to traverse for each key/value of an array."
+	},
+	"whileend": {
+		"prefix": "whileend",
+		"body": [
+			"<?php while (${1:\\$expr1}): ?>",
+			"\t${2}",
+			"\t<?php ${3:\\$howtoexit}; ?>",
+			"<?php endwhile; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP for statement to traverse for each key/value of an array."
+	},
+	"switchend": {
+		"prefix": "switchend",
+		"body": [
+			"<?php switch (${1:\\$expr1}): case ${2:\\$expr2}: ?>",
+			"\t${3}",
+			"\t<?php break; ?>",
+			"<?php default: ?>",
+			"\t${4}",
+			"<?php endswitch; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP switch statement."
+	},
+	"switchend2cases": {
+		"prefix": "switchend2cases",
+		"body": [
+			"<?php switch (${1:\\$expr1}): case ${2:\\$expr2}: ?>",
+			"\t${3}",
+			"\t<?php break; ?>",
+			"<?php case ${4:\\$expr3}: ?>",
+			"\t${5}",
+    		"\t<?php break; ?>",
+			"<?php default: ?>",
+			"\t${6}",
+			"<?php endswitch; ?>"
+		],
+		"description": "Inserts an alternative syntax of the PHP switch statement."
+	},
+	"define": {
+        "prefix": "define",
+        "body": [
+            "<?php define(\"${1:$expr1}\", \"${2:expr2}\"); ?>"
+        ],
+        "description": "Insert a define declaration."
+    },
+
+}
